@@ -1,0 +1,23 @@
+
+
+
+steps:
+
+
+** Paste your schema.prisma file under prisma/ folder
+
+
+** paste this code in the header of file :
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+** remove db_url from source db { ... }
+
+
+
+** Run the command below to generate the DBML file
+```bash
+npx prisma generate
+```
+** The generated DBML file will be located at prisma/dbml/schema.dbml
